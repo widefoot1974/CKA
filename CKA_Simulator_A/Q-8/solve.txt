@@ -1,0 +1,15 @@
+solve: Update Kubernetes to controlplane version
+
+[worker node]
+1) kubeadm version (alreay upgrade)
+2) kubectl version
+3) kubelet --version
+
+4) sudo kubeadm upgrade node
+5) sudo apt-mark unhold kubelet kubectl
+6) sudo apt-get update
+7) sudo apt-get install -y kubelet='1.35.x-*' kubectl='1.35.x-*' 
+8) sudo apt-mark hold kubelet kubectl
+
+9) sudo systemctl daemon-reload 
+10) sudo systemctl restart kubelet
