@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-contact
+  namespace: project-swan
+spec:
+  serviceAccountName: secret-reader
+  containers:
+  - image: nginx:1-alpine
+    name: api-contact
+    resources: {}

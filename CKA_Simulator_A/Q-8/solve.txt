@@ -13,3 +13,9 @@ solve: Update Kubernetes to controlplane version
 
 9) sudo systemctl daemon-reload 
 10) sudo systemctl restart kubelet
+
+[master node]
+1) kubeadm token create --print-join-command
+
+[worker node]
+1) kubeadm join ~~~
