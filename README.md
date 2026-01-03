@@ -6,8 +6,8 @@ CKA 시험 대비 문제 풀이
 2) CKA Simulator - B
 
 # 가입자 생성 작업
-
 1) Create private key
+'''bash
 openssl genrsa -out myuser.key 2048
 openssl req -new - key myuser.key -out myuser.csr -subj "/CN=myuser"
 
