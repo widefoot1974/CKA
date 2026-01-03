@@ -7,11 +7,13 @@ CKA 시험 대비 문제 풀이
 
 # 가입자 생성 작업
 1) Create private key
-'''bash
+```bash
 openssl genrsa -out myuser.key 2048
 openssl req -new - key myuser.key -out myuser.csr -subj "/CN=myuser"
+```
 
 3) Create CertificateSiging Request
+```yaml
 cat <<EOF | kubectl apply -f -
 apiVersion: certificates.k8s.io/v1
 kind: CertificateSigningRequest
@@ -23,3 +25,4 @@ spec:
   usages:
   - client auth
 EOF
+```
