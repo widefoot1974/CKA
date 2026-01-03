@@ -25,7 +25,7 @@ metadata:
 spec:
   # 생성한 csr 파일을 base64로 인코딩하여 삽입
   request: $(cat myuser.csr | base64 | tr -d '\n')
-  signerName: example.com/serving
+  signerName: kubernetes.io/kube-apiserver-client
   expirationSeconds: 86400 # 24시간 (선택 사항)
   usages:
   - client auth
