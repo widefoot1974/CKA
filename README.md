@@ -47,6 +47,7 @@ kubectl get csr  # CONDITION - Approved,Issued
 ```bash
 kubectl get csr/myser -o yaml
 kubectl get csr/myuser -o jsonpath='{.status.certificate}' | base64 -d > myuser.crt
+```
 
 ### 5) Add to kubeconfig
 ```bash
